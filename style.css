@@ -1,0 +1,73 @@
+body {
+  margin:0;
+  font-family: Arial;
+  background:black;
+  color:white;
+  overflow:hidden;
+}
+
+.hidden { display:none; }
+
+.center {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+}
+
+button {
+  padding:10px 20px;
+  margin:10px;
+  cursor:pointer;
+}
+
+#background {
+  position:absolute;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  transition:1s;
+}
+
+.night { background:linear-gradient(to bottom,#000428,#004e92); }
+.bridge { background:linear-gradient(to bottom,#434343,#000000); }
+.rain { background:linear-gradient(to bottom,#2c3e50,#4ca1af); }
+.forest { background:linear-gradient(to bottom,#134E5E,#71B280); }
+.neon { background:linear-gradient(to bottom,#141E30,#243B55); }
+
+#content {
+  padding:50px;
+  text-align:center;
+}
+
+input {
+  padding:8px;
+  margin:10px;
+}
+
+.finalText {
+  text-align:center;
+  margin-top:30vh;
+  font-size:22px;
+  animation: fadeIn 4s forwards;
+}
+
+@keyframes fadeIn {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+
+.confetti {
+  position:absolute;
+  width:100%;
+  height:100%;
+  background: repeating-linear-gradient(
+    45deg,
+    red,
+    yellow 10px,
+    blue 20px,
+    green 30px
+  );
+  opacity:0.2;
+}
